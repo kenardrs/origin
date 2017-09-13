@@ -14,13 +14,6 @@ app.controller('MainCtrl', function($scope,$http) {
       var file = _fileInput.files[0];
       var imageType = /image.*/;
 
-      // if (file.type.match(imageType)) {
-      //   var reader = new FileReader();
-      //   console.log("ok");
-      // }
-      // var fileReader = new FileReader();
-      // var fileStream = fileReader.readAsArrayBuffer(file); // file is a File object
-
       // Create FormData to send in the request
       var formData = new FormData();
 
@@ -46,16 +39,6 @@ app.controller('MainCtrl', function($scope,$http) {
         console.log("fail");
       });
 
-      // Restangular Custom POST
-      // return Restangular
-      //     .one(url)
-      //     .withHttpConfig({
-      //         transformRequest: angular.identity,
-      //         timeout: 0 // Avoid global setting's timeout on upload
-      //     })
-      //     .customPOST(formData, undefined, undefined, {
-      //         'Content-Type': undefined
-      //     });
     }
 
   function uploadFileJson(file, url) {
